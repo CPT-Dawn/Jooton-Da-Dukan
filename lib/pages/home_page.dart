@@ -38,14 +38,17 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Builder(builder: (context) {
-          return IconButton(
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.black,
+          return Padding(
+            padding: const EdgeInsets.only(left: 12.0),
+            child: IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
             ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
           );
         }),
       ),
