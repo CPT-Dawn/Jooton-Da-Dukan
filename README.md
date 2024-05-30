@@ -1,2 +1,3 @@
-# Jooton-Da-Dukan
-A very simple yet beautiful sneaker cross platform application developed in flutter.
+# flutter_application_1
+
+A new Flutter project.
