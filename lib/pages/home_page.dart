@@ -5,7 +5,7 @@ import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -20,11 +20,11 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // pages to be displayed
-  final List<Widget> _pages = [
-    const ShopPage(),
-    const CartPage(),
-    const AccountPage(),
+  // Pages to be displayed
+  final List<Widget> _pages = const [
+    ShopPage(),
+    CartPage(),
+    AccountPage(),
   ];
 
   @override
@@ -50,9 +50,8 @@ class _HomePageState extends State<HomePage> {
         }),
       ),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 19, 36, 46),
+        backgroundColor: const Color.fromARGB(255, 19, 36, 46),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
@@ -112,6 +111,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            const Spacer(), // Spacer to push items to the bottom
             const Padding(
               padding: EdgeInsets.only(left: 25.0),
               child: ListTile(
