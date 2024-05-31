@@ -9,12 +9,13 @@ class ShoeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 25),
-      width: 180,
+      width: 300,
       decoration: BoxDecoration(
         color: Colors.grey,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // shoe photo
           ClipRRect(
@@ -29,17 +30,42 @@ class ShoeTile extends StatelessWidget {
 
           // price+detail of the shoe
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  Text(shoe.name),
-                  Text(shoe.price),
-                ],
-              ),
-              Icon(Icons.add),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      shoe.name,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 22),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      '\₹' + shoe.price,
+                      // style: TextStyle(),
+                    ),
+                  ],
+                ),
+                Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        bottomRight: Radius.circular(12),
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    )),
+              ],
+            ),
           ),
         ],
       ),
