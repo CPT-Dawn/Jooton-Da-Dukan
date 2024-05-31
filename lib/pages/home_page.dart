@@ -5,7 +5,7 @@ import 'package:flutter_application_1/pages/cart_page.dart';
 import 'package:flutter_application_1/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, Key? key});
+  const HomePage({Key? key});
 
   @override
   State<HomePage> createState() => _HomePageState();
