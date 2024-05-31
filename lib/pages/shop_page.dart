@@ -17,7 +17,7 @@ class _ShopPageState extends State<ShopPage> {
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 25),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 208, 233, 246),
+            color: const Color.fromARGB(255, 208, 233, 246),
             borderRadius: BorderRadius.circular(8),
           ),
           child: const Row(
@@ -67,7 +67,9 @@ class _ShopPageState extends State<ShopPage> {
         Expanded(
           child: ListView.builder(
             itemBuilder: (context, index) {
-              return ShoeTile();
+              return null;
+            
+              // return ShoeTile();
             },
           ),
         ),
