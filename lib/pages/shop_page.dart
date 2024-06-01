@@ -14,6 +14,13 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   void addShoeToCart(Shoe shoe) {
     Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
+
+    showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+              title: Text('Successfully Added to Cart!'),
+              content: Text('View your cart to proceed!'),
+            ));
   }
 
   @override
@@ -82,7 +89,7 @@ class _ShopPageState extends State<ShopPage> {
 
                 return ShoeTile(
                   shoe: shoe,
-                  onTap: () => addShoeToCart(individualShoe),
+                  onTap: () => addShoeToCart(shoe),
                 );
               },
             ),
