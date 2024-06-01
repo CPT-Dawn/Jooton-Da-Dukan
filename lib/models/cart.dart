@@ -5,33 +5,29 @@ import 'shoe.dart';
 class Cart extends ChangeNotifier {
   List<Shoe> shoeShop = [
     Shoe(
-        name: 'Sunset Orchid',
+        name: 'Cosmic Kicks',
         price: '6000',
         imagepath: 'lib/images/shoe3.jpg',
         description:
-            'A shoe merging rich purple and warm orange, echoing a sunset'
-            's hues with floral grace, ideal for nature-inspired style aficionados.'),
+            'Step into the cosmos with Cosmic Kicks, where vibrant purple, orange, and lavender hues blend seamlessly for an out-of-this-world experience.'),
     Shoe(
-        name: 'Sunset Orchid',
-        price: '6000',
-        imagepath: 'lib/images/shoe3.jpg',
+        name: 'Blaze Boost',
+        price: '5500',
+        imagepath: 'lib/images/shoe4.jpg',
         description:
-            'A shoe merging rich purple and warm orange, echoing a sunset'
-            's hues with floral grace, ideal for nature-inspired style aficionados.'),
+            'Energize your steps with the vibrant Blaze Boost sneakers, blending dynamic design with unmatched comfort for the ultimate active lifestyle.'),
     Shoe(
-        name: 'Sunset Orchid',
-        price: '6000',
-        imagepath: 'lib/images/shoe3.jpg',
+        name: 'Ocean Sprint',
+        price: '5800',
+        imagepath: 'lib/images/shoe5.jpg',
         description:
-            'A shoe merging rich purple and warm orange, echoing a sunset'
-            's hues with floral grace, ideal for nature-inspired style aficionados.'),
+            'Dive into style and comfort with the Ocean Sprint sneakers, designed for those who embrace both speed and a splash of vibrant colors.'),
     Shoe(
-        name: 'Sunset Orchid',
-        price: '6000',
-        imagepath: 'lib/images/shoe3.jpg',
+        name: 'Fire Fusion',
+        price: '6200',
+        imagepath: 'lib/images/shoe2.jpg',
         description:
-            'A shoe merging rich purple and warm orange, echoing a sunset'
-            's hues with floral grace, ideal for nature-inspired style aficionados.'),
+            'Ignite your run with the Fire Fusion sneakers, where bold colors meet cutting-edge design for an unstoppable athletic experience.'),
   ];
 
   List<Shoe> userCart = [];
