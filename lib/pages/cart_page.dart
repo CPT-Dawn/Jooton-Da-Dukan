@@ -7,6 +7,29 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Cart>(builder: builder);
+    return Consumer<Cart>(
+      builder: (context, value, child) => const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25),
+        child: Column(
+          children: [
+            Text(
+              'My Cart',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  shoe individualShoe = value.getUserCart()[index];
+                  return CartItem();
+                },
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
