@@ -72,10 +72,12 @@ class _ShopPageState extends State<ShopPage> {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               Shoe shoe = Shoe(
-                  name: 'asd',
+                  name: 'Sunset Orchid',
                   price: '12',
                   imagepath: 'lib/images/shoe3.jpg',
-                  description: 'asdasd');
+                  description:
+                      'A shoe merging rich purple and warm orange, echoing a sunset'
+                      's hues with floral grace, ideal for nature-inspired style aficionados.');
               return ShoeTile(
                 shoe: shoe,
               );
