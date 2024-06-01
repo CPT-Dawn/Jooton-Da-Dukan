@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/cart_item.dart';
 import 'package:flutter_application_1/models/cart.dart';
+import 'package:flutter_application_1/models/shoe.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatelessWidget {
@@ -8,11 +10,11 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
-      builder: (context, value, child) => const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+      builder: (context, value, child) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: [
-            Text(
+            const Text(
               'My Cart',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
@@ -21,12 +23,15 @@ class CartPage extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
+                itemCount: value.getUserCart().length,
                 itemBuilder: (context, index) {
-                  shoe individualShoe = value.getUserCart()[index];
-                  return CartItem();
+                  Shoe individualShoe = value.getUserCart()[index];
+                  return CartItem(
+                    shoe: individualShoe,
+                  );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
