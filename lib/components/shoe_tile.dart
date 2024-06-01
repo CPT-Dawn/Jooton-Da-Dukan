@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/shoe.dart';
 
+// ignore: must_be_immutable
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
   void Function()? onTap;
@@ -9,7 +10,7 @@ class ShoeTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25),
       width: 300,
       decoration: BoxDecoration(
         color: Colors.grey,
@@ -50,7 +51,7 @@ class ShoeTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      '\₹' + shoe.price,
+                      '₹${shoe.price}',
                       // style: TextStyle(),
                     ),
                   ],

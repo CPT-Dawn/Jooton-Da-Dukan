@@ -33,7 +33,7 @@ class _ShopPageState extends State<ShopPage> {
             padding: const EdgeInsets.all(12),
             margin: const EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 208, 233, 246),
+              color: const Color.fromARGB(255, 245, 255, 255),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Row(
